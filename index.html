@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelGo</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand border-end pe-2" href="#">
+                <img src="Images/logo1.png" alt="Logo" width="70" height="38" class="d-inline-block">
+                <span class="main-color text-uppercase fw-medium let-space"
+                    style="letter-spacing: 1.8px;">TravelGo</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Rooms</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Trips
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Cairo</a></li>
+                            <li><a class="dropdown-item" href="#">Alex</a></li>
+                            <li><a class="dropdown-item" href="#">Dahab</a></li>
+                            <li><a class="dropdown-item" href="#">Sharm el Sheikh</a></li>
+                            <li><a class="dropdown-item" href="#">Marsa Matrouh</a></li>
+                            <li><a class="dropdown-item" href="#">port said</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Restaurant</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex pe-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn" type="submit">Search</button>
+                </form>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn main-color-bg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Login
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header main-color-bg">
+                    <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label fw-medium">Email address</label>
+                            <input type="email" class="form-control border-2" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label fw-medium">Password</label>
+                            <input type="password" class="form-control border-2" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                            <label class="form-check-label fw-medium" for="flexSwitchCheckDefault">Check me out</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-primary">Login</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start Home -->
+    <div class="home">
+        <div id="carousel" class="carousel slide" styl="top: 96px;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div id="slide1" class="carousel-item active" style="background: url(../Images/dahab.png);">
+                    <!-- <img src="Images/dahab.pn" class="d-block w-100" alt="Dahab"> -->
+                    <div class="carousel-caption d-md-block">
+                        <h5 class="fs-2 text-uppercase">Dahab</h5>
+                        <p>Dahab is a small Egyptian town on the southeast coast of the Sinai Peninsula in Egypt.</p>
+                        <button type="button" class="btn main-color-bg">Vist us</button>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item" style="background: url(../Images/Sharm\ el\ Sheikh.jpeg);">
+                    <!-- <img src="Images/Sharm el Sheikh.jpe" class="d-block w-100" alt="Sharm el Sheikh"> -->
+                    <div class="carousel-caption d-md-block">
+                        <h5 class="fs-2 text-uppercase">Sharm el Sheikh</h5>
+                        <p> It's known for its sheltered sandy beaches, clear waters and coral reefs.</p>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item" style="background: url(../Images/beaches\ in\ Egypt.jpeg);">
+                    <!-- <img src="Images/Agiba, Marsa Matrouh, Egypt.jpe" class="d-block w-100" alt="Marsa Matrouh"> -->
+                    <div class="carousel-caption d-md-block">
+                        <h5 class="fs-2 text-uppercase">Marsa Matrouh</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item" style="background: url(../Images/port-said.jpeg);">
+                    <!-- <img src="Images/port-said.jpe" class="d-block w-100" alt="Marsa Matrouh"> -->
+                    <div class="carousel-caption d-md-block">
+                        <h5 class="fs-2 text-uppercase">Port Said</h5>
+                        <p>is an Egyptian city at the northern end of the Suez Canal, on the Mediterranean Sea.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- End Home -->
+    <!-- social icons -->
+    <div class="social-icons position-fixed d-flex flex-column">
+        <a href=""><i class="bi bi-facebook fs-1"></i></a>
+        <a href="" class="link-success"><i class="bi bi-whatsapp fs-1"></i></a>
+        <a href="" class="link-info"><i class="bi bi-twitter fs-1"></i></a>
+        <a href="" style="color: #0077b5;"><i class="bi bi-linkedin fs-1"></i></a>
+    </div>
+    <!-- Welcome -->
+    <div class="p-3 bg-primary-subtle border rounded-bottom">
+        <h3 class="text-uppercase sec-color">Welcome to Egypt</h3>
+        <p>Are you planning to visit Egypt? We offer the ultimate tour in Egypt, covering Cairo, alex_ Frorn a one day
+            trip to a 10 day dream vacation, we will take care of all your needs_
+            hotels. 24/7 Custorner Service.</p>
+        <button class="btn bg-white text-info border-white fw-semibold" id="btnhover">Learn more</button>
+    </div>
+    <hr class="border-2">
+    <div class="p-4 sec-color-bg border rounded">
+        <h2 class="text-center text-white pt-3" style="font-family: 'Gilda Display', serif;">Popular destinations in
+            Egypt</h2>
+    </div>
+    <!-- accordion -->
+    <div class="accordion accordion-flush my-3" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed text-uppercase fs-5 fw-semibold main-color" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                    aria-controls="flush-collapseOne" style="background-color: transparent;">
+                    giza City
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Major tounst destinations include the millennia-old monuments in the Nile
+                    Valley Principal among them are the Pyramids and Great Sphinx at Giza</div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed text-uppercase fs-5 fw-semibold main-color" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                    aria-controls="flush-collapseTwo" style="background-color: transparent;">
+                    Port Said city
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Port Said is known for some of its popular attractions, which include:
+                    <ul class="list">
+                        <li>Suez Canal</li>
+                        <li>Port Said Military Museum</li>
+                        <li>Port Fouad Grand Mosque</li>
+                        <li>El Nasr Museum For Modern Art</li>
+                        <li>Suho Squara</li>
+                        <li>Salt Mountain</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed text-uppercase fs-5 fw-semibold main-color" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+                    aria-controls="flush-collapseThree" style="background-color: transparent;">
+                    SINAI PENINSULA
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Sinai has the beach resorts of Sharm el-Sheikh, Dahab, Nuweiba and Taba as
+                    well as locations mentioned in the Bible such as Mount Sinai ("Jabal Musa"). Saint Catherine's
+                    Monastery may be the oldest working Christian monastery in the world.</div>
+            </div>
+        </div>
+    </div>
+    <hr class="border-1">
+    <!-- Welcome -->
+    <!-- Translate -->
+    <div class="p-2 sec-color-bg border rounded">
+        <h2 class="text-center text-white pt-2 text-capitalize" style="font-family: 'Gilda Display', serif;">Translate
+            form arabic to english</h2>
+    </div>
+    <div class="p-3 bg-primary-subtle border rounded-bottom">
+        <h3 class="fs-5">Write and Translate <span class="sec-color">Press Here</span></h3>
+        <button class="btn bg-white text-info border-white fw-semibold shadow alart" id="btnhover">Copy</button>
+        <div class="form-floating mt-3">
+            <textarea class="form-control shadow-sm" placeholder="Translate" id="floatingTextarea2"
+                style="height: 120px"></textarea>
+            <label for="floatingTextarea2" class="text-muted">Translate:</label>
+        </div>
+    </div>
+    <hr class="border-1">
+    <div class="p-2 sec-color-bg border rounded">
+        <h2 class="text-center text-white pt-2 text-capitalize" style="font-family: 'Gilda Display', serif;">Translate
+            form arabic to frensh</h2>
+    </div>
+    <div class="p-3 bg-primary-subtle border rounded-bottom">
+        <h3 class="fs-5">Write and Translate <span class="sec-color">Press Here</span></h3>
+        <button class="btn bg-white text-info border-white fw-semibold shadow alart" id="btnhover">Copy</button>
+        <div class="form-floating mt-3">
+            <textarea class="form-control shadow-sm" placeholder="Translate" id="floatingTextarea2"
+                style="height: 120px"></textarea>
+            <label for="floatingTextarea2" class="text-muted">Translate:</label>
+        </div>
+    </div>
+    <hr class="border-1">
+    <div class="p-2 sec-color-bg border rounded">
+        <h2 class="text-center text-white pt-2 text-capitalize" style="font-family: 'Gilda Display', serif;">Translate
+            form arabic to german</h2>
+    </div>
+    <div class="p-3 bg-primary-subtle border rounded-bottom">
+        <h3 class="fs-5">Write and Translate <span class="sec-color">Press Here</span></h3>
+        <button class="btn bg-white text-info border-white fw-semibold shadow alart" id="btnhover">Copy</button>
+        <div class="form-floating mt-3">
+            <textarea class="form-control shadow-sm" placeholder="Translate" id="floatingTextarea2"
+                style="height: 120px"></textarea>
+            <label for="floatingTextarea2" class="text-muted">Translate:</label>
+        </div>
+    </div>
+    <hr class="border-1">
+    <!-- Translate -->
+    <!-- background -->
+    <div class="background w-100" style="background: url(./Images/cairo.jpg);"></div>
+    <div class="p-2 bg-primary-subtle border rounded">
+        <h2 class="text-center pt-3 text-uppercase sec-color fw-semibold" style="font-family: 'Gilda Display', serif;">
+            popular destinatuions in egypt</h2>
+    </div>
+    <!-- background -->
+    <div class="destinatuions">
+        <div class="container-fluid my-5 px-5">
+            <div class="row justify-content-center g-5">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card shadow overlay">
+                        <img src="./Images/cairo1.jpeg" class="card-img-top p-2" alt="cairo"
+                            style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title fs-4 text-uppercase main-color m-0">Cairo</h5>
+                                <a href="#" class="btn">Learn more</a>
+                            </div>
+
+                            <p class="card-text">Cairo is the capital of Egypt and the city-state Cairo Governorate.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card shadow overlay">
+                        <img src="./Images/port-said1.jpg" class="card-img-top p-2" alt="cairo"
+                            style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title fs-4 text-uppercase main-color m-0">port said</h5>
+                                <a href="#" class="btn">Learn more</a>
+                            </div>
+
+                            <p class="card-text">Port Said is an Egyptian city at the northern end of the Suez Canal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card shadow overlay">
+                        <img src="./Images/sharm el Sheikh1.jpeg" class="card-img-top p-2" alt="cairo"
+                            style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title fs-4 text-uppercase main-color m-0">sharm el Sheikh</h5>
+                                <a href="#" class="btn text-nowrap">Learn more</a>
+                            </div>
+
+                            <p class="card-text">It's known for its sheltered sandy beaches, clear waters and coral
+                                reefs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card shadow overlay">
+                        <img src="./Images/عجيبة Marsa matrouh -egypt.jpeg" class="card-img-top p-2" alt="cairo"
+                            style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title fs-4 text-uppercase main-color m-0">Marsa matrouh</h5>
+                                <a href="#" class="btn text-nowrap">Learn more</a>
+                            </div>
+
+                            <p class="card-text">Marsa Matruh is a resort town on Egypt’s Mediterranean coast.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card shadow overlay">
+                        <img src="./Images/dhab2.jpg" class="card-img-top p-2" alt="cairo"
+                            style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title fs-4 text-uppercase main-color m-0">Dahab</h5>
+                                <a href="#" class="btn">Learn more</a>
+                            </div>
+
+                            <p class="card-text">Dahab is a small Egyptian town on the southeast coast of the Sinai
+                                Peninsula in Egypt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card shadow overlay">
+                        <img src="./Images/Aswan.jpeg" class="card-img-top p-2" alt="cairo"
+                            style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title fs-4 text-uppercase main-color m-0">Aswan</h5>
+                                <a href="#" class="btn">Learn more</a>
+                            </div>
+
+                            <p class="card-text">Aswan, a city on the Nile River, Nubian City In lhe South ot Egypt</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card shadow overlay">
+                        <img src="./Images/Luxor.jpeg" class="card-img-top p-2" alt="cairo"
+                            style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title fs-4 text-uppercase main-color m-0">Luxor</h5>
+                                <a href="#" class="btn">Learn more</a>
+                            </div>
+
+                            <p class="card-text">Luxor is a city on the east bank of the Nile River in southern Egypt.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card shadow overlay">
+                        <img src="./Images/Alexandria.jpeg" class="card-img-top p-2" alt="cairo"
+                            style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title fs-4 text-uppercase main-color m-0">Alexandria</h5>
+                                <a href="#" class="btn text-nowrap">Learn more</a>
+                            </div>
+
+                            <p class="card-text">Is the second largest city in Egypt and the largest city on the
+                                Mediterranean coast.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- background -->
+    <div class="background w-100" style="background: url(./Images/island.jpeg);"></div>
+    <hr class="border-1">
+    <div class="p-2 bg-primary-subtle border rounded">
+        <h2 class="text-center pt-3 text-uppercase sec-color fw-semibold" style="font-family: 'Gilda Display', serif;">
+            our team
+        </h2>
+    </div>
+    <!-- Team -->
+    <div class="team my-5 pb-5">
+        <div class="container-fluid">
+            <div class="row justify-content-center row-gap-4">
+                <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-12">
+                    <div class="cards w-100 h-100 d-flex justify-content-center">
+                        <div class="card rounded-4" style="width:300px; height: 400px;">
+                            <div class="h-100 w-100 bg-card-img rounded-4" style="background: url(./Images/team1.jpg);">
+                                <div class="bg-dark bg-gradient w-100 h-100 position-absolute rounded-4 overlay2"
+                                    style="opacity: 0.5;"></div>
+                                <div class="pt-2 text-white position-absolute">
+                                    <div class="card-header bg-transparent border-0" style="height: 150px;">
+                                        <h5 class="card-title">All thanks and appreciation</h5>
+                                        <p class="card-text" style="font-size: 14px;"><small><i class="bi bi-clock"></i>
+                                                Octtober
+                                                25, 2020</small></p>
+                                    </div>
+                                    <div class="card-footer border-0 bg-transparent text-white mt-5">
+                                        <img src="./Images/team1.jpg"
+                                            class="border border-secondary border-3 img-fluid rounded-circle"
+                                            style="height: 120px; width: 88px ;object-fit: cover;" alt="team">
+                                        <p class="card-text m-0 fw-semibold">Suzanne R. Fitzgerald</p>
+                                        <p class="card-text"><small>Director of UI/UX</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-12">
+                    <div class="cards w-100 h-100 d-flex justify-content-center">
+                        <div class="card rounded-4" style="width:300px; height: 400px;">
+                            <div class="h-100 w-100 bg-card-img rounded-4"
+                                style="background: url(./Images/team2.jpeg);">
+                                <div class="bg-dark bg-gradient w-100 h-100 position-absolute rounded-4 overlay2"
+                                    style="opacity: 0.5;"></div>
+                                <div class="pt-2 text-white position-absolute">
+                                    <div class="card-header bg-transparent border-0" style="height: 150px;">
+                                        <h5 class="card-title">All thanks and appreciation</h5>
+                                        <p class="card-text" style="font-size: 14px;"><small><i class="bi bi-clock"></i>
+                                                Octtober
+                                                25, 2020</small></p>
+                                    </div>
+                                    <div class="card-footer border-0 bg-transparent text-white mt-5">
+                                        <img src="./Images/team2.jpeg"
+                                            class="border border-secondary border-3 img-fluid rounded-circle"
+                                            style="height: 120px; width: 88px ;object-fit: cover;" alt="team">
+                                        <p class="card-text m-0 fw-semibold">Shelby J. Moore</p>
+                                        <p class="card-text"><small>Director of UI/UX</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-12">
+                    <div class="cards w-100 h-100 d-flex justify-content-center">
+                        <div class="card rounded-4" style="width:300px; height: 400px;">
+                            <div class="h-100 w-100 bg-card-img rounded-4" style="background: url(./Images/team3.jpg);">
+                                <div class="bg-dark bg-gradient w-100 h-100 position-absolute rounded-4 overlay2"
+                                    style="opacity: 0.5;"></div>
+                                <div class="pt-2 text-white position-absolute">
+                                    <div class="card-header bg-transparent border-0" style="height: 150px;">
+                                        <h5 class="card-title">All thanks and appreciation</h5>
+                                        <p class="card-text" style="font-size: 14px;"><small><i class="bi bi-clock"></i>
+                                                Octtober
+                                                25, 2020</small></p>
+                                    </div>
+                                    <div class="card-footer border-0 bg-transparent text-white mt-5">
+                                        <img src="./Images/team3.jpg"
+                                            class="border border-secondary border-3 img-fluid rounded-circle"
+                                            style="height: 120px; width: 88px ;object-fit: cover;" alt="team">
+                                        <p class="card-text m-0 fw-semibold">Jennifer B. Taylor</p>
+                                        <p class="card-text"><small>Director of UI/UX</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-12">
+                    <div class="cards w-100 h-100 d-flex justify-content-center">
+                        <div class="card img-fluid rounded-4" style="width:300px; height: 400px;">
+                            <img src="./Images/team3.jpg" class="card-img-top w-100 h-100" alt="team">
+                            <div class="bg-dark bg-gradient w-100 h-100 position-absolute rounded"
+                                style="opacity: 0.7;"></div>
+                            <div class="card-img-overlay text-white">
+                                <div class="card-header bg-transparent border-0 pt-1 pe-0" style="height: 137px;">
+                                    <h5 class="card-title">All thanks and appreciation</h5>
+                                    <p class="card-text" style="font-size: 14px;"><small><i class="bi bi-clock"></i>
+                                            Octtober
+                                            25, 2020</small></p>
+                                </div>
+                                <div class="card-footer border-0 bg-transparent text-white mt-5">
+                                    <img src="./Images/team3.jpg"
+                                        class="border border-secondary border-3 img-fluid rounded-circle"
+                                        style="height: 120px; width: 88px ;object-fit: cover;" alt="team">
+                                    <p class="card-text m-0 fw-semibold">Shelby J. Moore</p>
+                                    <p class="card-text"><small>Director of UI/UX</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- Team -->
+    <hr class="border-1">
+    <!-- News -->
+    <h2 class="text-center pt-3 text-uppercase sec-color fw-semibold" style="font-family: 'Gilda Display', serif;">
+        our News
+    </h2>
+    <div class="container">
+        <div class="card rounded-3 mb-3 w-100 shadow-lg"
+            style="background-image: linear-gradient(180deg, rgb(15, 36, 84, 0.26), rgb(32, 149, 174, 0.15));">
+            <div class="row g-0 flex-row-reverse justify-content-center">
+                <div class="col-md-4">
+                    <img src="./Images/1.jpeg" class="img-fluid rounded-end-3 w-100 img-skew" alt="..." style="height: 368px; transform-origin: top;
+                        transform: skew(3deg);">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body mb-5" style="padding: 22px;">
+                        <h5 class="card-title text-capitalize sec-color fs-4 fw-semibold">Podcast title</h5>
+                        <p class="card-text position-relative" id="news-text"><small class="text-dark"><i
+                                    class="bi bi-calendar2-week-fill"></i> Mon, may 25th 2020</small></p>
+                        <span class="border-3 border-bottom border-primary rounded-pill d-block"
+                            style="width: 110px; margin-top: -5px;"></span>
+                        <p class="card-text text-black pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Pariatur illum
+                            dolorum nihil mollitia dolores ea aperiam a sint vero maxime? Voluptatem reiciendis, tempora
+                            voluptatum sint nam fuga, ducimus temporibus quo esse quae ea blanditiis officiis. Maxime
+                            tenetur ducimus.</p>
+                    </div>
+                    <div class="card-footer border-0 bg-transparent ps-5 pb-4">
+                        <span class="bg-dark-subtle px-3 py-2 fw-semibold rounded play" style="cursor: default;"><i
+                                class="bi bi-mic-fill"></i> Podcast</span>
+                        <span class="bg-dark-subtle px-3 py-2 fw-semibold rounded play" style="cursor: default;"><i
+                                class="bi bi-clock-fill"></i> 55 mins</span>
+                        <span class="bg-dark-subtle px-3 py-2 fw-semibold rounded text-center main-color play"
+                            style="cursor: pointer; white-space: nowrap;"><i class="fa fa-solid fa-play pe-1"></i></i>Play Episode</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card rounded-3 mb-3 w-100 shadow-lg"
+            style="background-image: linear-gradient(180deg, rgb(15, 36, 84, 0.26), rgb(32, 149, 174, 0.15));">
+            <div class="row g-0 justify-content-center">
+                <div class="col-md-4">
+                    <img src="./Images/2.jpeg" class="img-fluid rounded-start-3 w-100 img-skew" alt="..." style="height: 368px; transform-origin: top;
+                        transform: skew(-3deg);">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body mb-5" style="padding: 22px;">
+                        <h5 class="card-title text-capitalize sec-color fs-4 fw-semibold">Podcast title</h5>
+                        <p class="card-text position-relative" id="news-text"><small class="text-dark"><i
+                                    class="bi bi-calendar2-week-fill"></i> Mon, may 25th 2020</small></p>
+                        <span class="border-3 border-bottom border-danger rounded-pill d-block"
+                            style="width: 110px; margin-top: -5px;"></span>
+                        <p class="card-text text-black pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Pariatur illum
+                            dolorum nihil mollitia dolores ea aperiam a sint vero maxime? Voluptatem reiciendis, tempora
+                            voluptatum sint nam fuga, ducimus temporibus quo esse quae ea blanditiis officiis. Maxime
+                            tenetur ducimus.</p>
+                    </div>
+                    <div class="card-footer border-0 bg-transparent ps-5 pb-4">
+                        <span class="bg-dark-subtle px-3 py-2 fw-semibold rounded play" style="cursor: default;"><i
+                                class="bi bi-mic-fill"></i> Podcast</span>
+                        <span class="bg-dark-subtle px-3 py-2 fw-semibold rounded play" style="cursor: default;"><i
+                                class="bi bi-clock-fill"></i> 55 mins</span>
+                                <span class="bg-dark-subtle px-3 py-2 fw-semibold rounded text-center main-color play2"
+                                style="cursor: pointer; white-space: nowrap;"><i class="fa fa-solid fa-play pe-1"></i></i>Play Episode</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card rounded-3 mb-3 w-100 shadow-lg"
+            style="background-image: linear-gradient(180deg, rgb(15, 36, 84, 0.26), rgb(32, 149, 174, 0.15));">
+            <div class="row g-0 flex-row-reverse justify-content-center">
+                <div class="col-md-4">
+                    <img src="./Images/dahab1.png" class="img-fluid rounded-end-3 w-100 img-skew" alt="..." style="height: 368px; transform-origin: top;
+                        transform: skew(3deg);">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body mb-5" style="padding: 22px;">
+                        <h5 class="card-title text-capitalize sec-color fs-4 fw-semibold">Podcast title</h5>
+                        <p class="card-text position-relative" id="news-text"><small class="text-dark"><i
+                                    class="bi bi-calendar2-week-fill"></i> Mon, may 25th 2020</small></p>
+                        <span class="border-3 border-bottom border-warning rounded-pill d-block"
+                            style="width: 110px; margin-top: -5px;"></span>
+                        <p class="card-text text-black pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Pariatur illum
+                            dolorum nihil mollitia dolores ea aperiam a sint vero maxime? Voluptatem reiciendis, tempora
+                            voluptatum sint nam fuga, ducimus temporibus quo esse quae ea blanditiis officiis. Maxime
+                            tenetur ducimus.</p>
+                    </div>
+                    <div class="card-footer border-0 bg-transparent ps-5 pb-4">
+                        <span class="bg-dark-subtle px-3 py-2 fw-semibold rounded play" style="cursor: default;"><i
+                                class="bi bi-mic-fill"></i> Podcast</span>
+                        <span class="bg-dark-subtle px-3 py-2 fw-semibold rounded play" style="cursor: default;"><i
+                                class="bi bi-clock-fill"></i> 55 mins</span>
+                                <span class="bg-dark-subtle px-3 py-2 fw-semibold rounded text-center main-color play3"
+                                style="cursor: pointer; white-space: nowrap;"><i class="fa fa-solid fa-play pe-1"></i></i>Play Episode</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card rounded-3 mb-3 w-100 shadow-lg"
+            style="background-image: linear-gradient(180deg, rgb(15, 36, 84, 0.26), rgb(32, 149, 174, 0.15));">
+            <div class="row g-0 justify-content-center">
+                <div class="col-md-4">
+                    <img src="./Images/4.jpeg" class="img-fluid rounded-start-3 w-100 img-skew" alt="..." style="height: 368px; transform-origin: top;
+                        transform: skew(-3deg);">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body mb-5" style="padding: 22px;">
+                        <h5 class="card-title text-capitalize sec-color fs-4 fw-semibold">Podcast title</h5>
+                        <p class="card-text position-relative" id="news-text"><small class="text-dark"><i
+                                    class="bi bi-calendar2-week-fill"></i> Mon, may 25th 2020</small></p>
+                        <span class="border-3 border-bottom border-success rounded-pill d-block"
+                            style="width: 110px; margin-top: -5px;"></span>
+                        <p class="card-text text-black pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Pariatur illum
+                            dolorum nihil mollitia dolores ea aperiam a sint vero maxime? Voluptatem reiciendis, tempora
+                            voluptatum sint nam fuga, ducimus temporibus quo esse quae ea blanditiis officiis. Maxime
+                            tenetur ducimus.</p>
+                    </div>
+                    <div class="card-footer border-0 bg-transparent ps-5 pb-4">
+                        <span class="bg-dark-subtle px-3 py-2 fw-semibold rounded play" style="cursor: default;"><i
+                                class="bi bi-mic-fill"></i> Podcast</span>
+                        <span class="bg-dark-subtle px-3 py-2 fw-semibold rounded play" style="cursor: default;"><i
+                                class="bi bi-clock-fill"></i> 55 mins</span>
+                                <span class="bg-dark-subtle px-3 py-2 fw-semibold rounded text-center main-color play4"
+                                style="cursor: pointer; white-space: nowrap;"><i class="fa fa-solid fa-play pe-1"></i></i>Play Episode</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- News -->
+    <!-- Service -->
+    <div class="mb-4">
+        <h2 class="text-center pt-3 text-uppercase sec-color fw-semibold" style="font-family: 'Gilda Display', serif;">
+            our Service
+        </h2>
+    </div>
+    <div class="our-service mb-4">
+        <div class="container">
+            <div class="row g-5 justify-content-center">
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                    <div class="d-flex justify-content-center">
+                        <div class="card rounded-0 z-1 shadow"
+                            style="width: 17rem; border-color: rgba(32, 149, 174, 0.2);">
+                            <div class="card-body position-relative">
+                                <i class="bi bi-airplane fs-1 main-color"></i>
+                                <h5 class="card-title" style="font-family: 'Gilda Display', serif;">Pick Up & Drop</h5>
+                                <p class="card-text">We’ll pick up from airport while you comfy on your ride, mus
+                                    nellentesque habitant.</p>
+                                <div class="serv-shap">
+                                    <span class="shap">
+                                        <i class="bi bi-airplane main-color"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                    <div class="d-flex justify-content-center">
+                        <div class="card rounded-0 z-1 shadow"
+                            style="width: 17rem; border-color: rgba(32, 149, 174, 0.2);">
+                            <div class="card-body position-relative">
+                                <i class="fa fa-solid fa-hotel fs-1 main-color " style="margin: 10px 0;"></i>
+                                <h5 class="card-title" style="font-family: 'Gilda Display', serif;">Room Service</h5>
+                                <p class="card-text">Room tincidunt nis ace park norttito sit amet space, mus
+                                    nellentesque habitant.</p>
+                                <div class="serv-shap">
+                                    <span class="shap" style="font-size: 120px;">
+                                        <i class="fa fa-solid fa-hotel main-color"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                    <div class="d-flex justify-content-center">
+                        <div class="card rounded-0 z-1 shadow"
+                            style="width: 17rem; border-color: rgba(32, 149, 174, 0.2);">
+                            <div class="card-body position-relative">
+                                <i class="bi bi-wifi main-color"
+                                    style="font-size: 45px; margin-top: -7px; display: inline-block;"></i>
+                                <h5 class="card-title" style="font-family: 'Gilda Display', serif;">Fibre Internet</h5>
+                                <p class="card-text">Wifi tincidunt nis ace park norttito sit amet space, mus
+                                    nellentesque habitant.</p>
+                                <div class="serv-shap">
+                                    <span class="shap">
+                                        <i class="bi bi-wifi main-color"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                    <div class="d-flex justify-content-center">
+                        <div class="card rounded-0 z-1 shadow"
+                            style="width: 17rem; border-color: rgba(32, 149, 174, 0.2);">
+                            <div class="card-body position-relative">
+                                <i class="fa fa-solid fa-utensils fs-1 main-color" style="margin: 10px 0;"></i>
+                                <h5 class="card-title" style="font-family: 'Gilda Display', serif;">Breakfast</h5>
+                                <p class="card-text">Eat tincidunt nisa ace park norttito sit amet space, mus
+                                    nellentesque habitant.</p>
+                                <div class="serv-shap">
+                                    <span class="shap">
+                                        <i class="fa fa-solid fa-utensils main-color"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="sec-color-bg">
+        <div class="container py-3">
+            <div class="row justify-content-between">
+                <div class="col-md-4">
+                    <div class="single-footer text-white text-center">
+                        <h3 class="footer-title border-bottom border-top py-2" style="font-family: 'Gilda Display', serif;">About Beach Resort</h3>
+                        <p>Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the aucan
+                            vestibulum aliquam justo in sapien rutrum volutpat.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-footer text-white text-center">
+                        <h3 class="footer-title border-bottom border-top py-2" style="font-family: 'Gilda Display', serif;">Explore</h3>
+                        <ul class="footer-list list-unstyled">
+                            <li><a href="#" class="text-decoration-none link-light">Home</a></li>
+                            <li><a href="#" class="text-decoration-none link-light">Rooms &amp; Suites</a></li>
+                            <li><a href="#" class="text-decoration-none link-light">Restaurant</a></li>
+                            <li><a href="#" class="text-decoration-none link-light">Trips</a></li>
+                            <li><a href="#" class="text-decoration-none link-light">About Hotel</a></li>
+                            <li><a href="#" class="text-decoration-none link-light">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-footer text-white text-center">
+                        <h3 class="footer-title border-bottom border-top py-2" style="font-family: 'Gilda Display', serif;">Contact</h3>
+                        <p>1616 Broadway NY, New York 10001
+                            United States of America</p>
+                        <p class="mt-3 fs-4"><i class="bi bi-telephone-outbound pe-1"></i> 855 100 4444</p>   
+                        <p class="">info@beachhotel.com</p> 
+                        <span class="border-bottom d-block mx-auto" style="border-color: #0077b5 !important; width: 150px; margin-top: -12px;"></span>
+                        <div class="social-footer mt-4">
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href=""><i class="bi bi-whatsapp"></i></a>
+                            <a href=""><i class="bi bi-twitter"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="border-top border-secondary-subtle d-block w-100 mt-4 opacity-25"></span>
+        <div class="py-4 text-white text-center copyright">© Copyright 2024 by <a href="https://github.com/AbdoAssall" class="link-light text-decoration-none" 
+            target="_blank" style="transition: all .6s;">Abdo Assall</a>, All Rights Reserved.</div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
